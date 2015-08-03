@@ -59,7 +59,7 @@ var education = {
 		{
 			"name" : "North Carolina Central University",
 			"location" : "Durham, NC",
-			"degree" : "M.A.",
+			"degree" : "M.L.S.",
 			"majors" : ["Library Science"],
 			"dates" : "2010 - 2014",
 			"url" : "http://www.ncsu.edu"
@@ -133,9 +133,27 @@ projects.display = function() {
 	}
 }
 
+education.display = function() {
+	for (school in education.schools) {
+		$("#education").append(HTMLschoolStart);
+		var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
+		var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
+		var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
+		var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
+		$(".education-entry:last").append(formattedName + formattedDegree);
+		$(".education-entry:last").append(formattedDates);
+		$(".education-entry:last").append(formattedLocation);
+		for (major in education.schools[school].majors) {
+			var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors[major]);
+			$(".education-entry:last").append(formattedMajor);
+		}
+	}
+}
+
 bio.display();
 work.display();
 projects.display();
+education.display();
 
 $("#main").append(internationalizeButton);
 
