@@ -42,6 +42,7 @@ var bio = {
 		"twitter" : "@JustinMStout",
 		"location" : "Kinston, NC"
 	},
+	"bioPic" : "images/picture.jpg",
 	"skills" : ["HTML", "CSS", "Javascript", "jQuery"]
 };
 
@@ -75,20 +76,24 @@ var education = {
 };
 
 bio.display = function() {
-	var formattedName = HTMLheaderName.replace("%data%",bio.name + " ");
-	var formattedRole = HTMLheaderRole.replace("%data%",bio.role);
+	var formattedName = HTMLheaderName.replace("%data%", bio.name + " ");
+	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 	$("#header").prepend(formattedRole);
 	$("#header").prepend(formattedName);
-	var formattedMobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
-	var formattedEmail = HTMLemail.replace("%data%",bio.contacts.email);
-	var formattedGithub = HTMLgithub.replace("%data%",bio.contacts.github);
-	var formattedTwitter = HTMLtwitter.replace("%data%",bio.contacts.twitter);
-	var formattedLocation = HTMLlocation.replace("%data%",bio.contacts.location);
+	var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+	var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+	var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+	var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+	var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 	$("#topContacts").append(formattedMobile);
 	$("#topContacts").append(formattedEmail);
 	$("#topContacts").append(formattedGithub);
 	$("#topContacts").append(formattedTwitter);
 	$("#topContacts").append(formattedLocation);
+	var formattedPicture = HTMLbioPic.replace("%data%", bio.bioPic);
+	var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+	$("#header").append(formattedPicture);
+	$("#header").append(formattedWelcome);
 	$("#header").append(HTMLskillsStart);
 	for (skill in bio.skills) {
 		var formattedSkill = HTMLskills.replace("%data%",bio.skills[skill]);
