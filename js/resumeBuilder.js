@@ -9,7 +9,7 @@ var work = {
 			"title" : "Reference Librarian and Grants Specialist",
 			"location" : "Kinston, NC",
 			"dates" : "October 2006 - present",
-			"description" : "Performed professional and assisted with administrative library duties",
+			"description" : "Managed the Library's integrated library system, as well as a migration to the Evergreen open source integrated library system; wrote proposals which were awarded over $1,000,000 from various sources, including government, corporate, and private foundation sources; assisted in leading several strategic library initiatives with library consultants funded by LSTA grant funding, including the development of a new technology plan and a new five-year strategic plan; completed the Library’s annual USAC E-Rate proposal and all necessary forms for reimbursement; assisted with two library renovation projects, while serving on the Building Committee for the second and coordinating communications between the owner and architect; implemented several new information technology systems funded by grant funding, including an RFID automated system, time and print management software for public computers, network upgrades, and a mobile training lab.",
 			"url" : "http://www.neuselibrary.org"
 		}
 	]
