@@ -20,13 +20,13 @@ var projects = {
 			"title" : "Portfolio",
 			"dates" : "July 2015",
 			"description" : "Interactive Portfolio",
-			"images" : ["images/website1.png", "images/website2.png"]
+			"images" : ["images/project1-1.png", "images/project1-2.png"]
 		},
 		{
 			"title" : "Resume",
 			"dates" : "August 2015",
 			"description" : "Interactive Resume",
-			"images" : []
+			"images" : ["images/project2-1.png", "images/project2-2.png"]
 		}
 	]
 };
@@ -53,7 +53,7 @@ var education = {
 			"location" : "Durham, NC",
 			"degree" : "B.S.",
 			"majors" : ["Economics"],
-			"dates" : "2001 - 2006",
+			"dates" : "2006",
 			"url" : "http://www.duke.edu"
 		},
 		{
@@ -61,7 +61,7 @@ var education = {
 			"location" : "Durham, NC",
 			"degree" : "M.L.S.",
 			"majors" : ["Library Science"],
-			"dates" : "2010 - 2014",
+			"dates" : "2014",
 			"url" : "http://www.ncsu.edu"
 		}
 	],
@@ -99,6 +99,11 @@ bio.display = function() {
 		var formattedSkill = HTMLskills.replace("%data%",bio.skills[skill]);
 		$("#skills").append(formattedSkill);
 	}
+	$("#footerContacts").append(formattedMobile);
+	$("#footerContacts").append(formattedEmail);
+	$("#footerContacts").append(formattedGithub);
+	$("#footerContacts").append(formattedTwitter);
+	$("#footerContacts").append(formattedLocation);
 }
 
 work.display = function() {
@@ -156,8 +161,7 @@ education.display = function() {
 		var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
 		var formattedDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates);
 		var formattedURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
-		$(".education-entry:last").append(formattedTitle);
-		$(".education-entry:last").append(formattedSchool);
+		$(".education-entry:last").append(formattedTitle + formattedSchool);
 		$(".education-entry:last").append(formattedDates);
 		$(".education-entry:last").append(formattedURL);
 	}
@@ -170,12 +174,9 @@ education.display();
 
 $("#mapDiv").append(googleMap);
 
-$("#main").append(internationalizeButton);
+$(document).click(function(loc) {
+	var x = loc.pageX;
+	var y = loc.pageY;
 
-function inName() {
-	var names = bio.name.split(" ");
-	var firstLetter = names[0][0].toUpperCase();
-	var restOfWord = names[0].slice(1,names[0].length);
-	names[1] = names[1].toUpperCase();
-	return firstLetter + restOfWord + " " + names[1];
-}
+	logClicks(x,y);
+})
