@@ -98,16 +98,16 @@ bio.display = function() {
 	$("#header").append(formattedPicture);
 	$("#header").append(formattedWelcome);
 	$("#header").append(HTMLskillsStart);
-	for (skill in bio.skills) {
-		var formattedSkill = HTMLskills.replace("%data%",bio.skills[skill]);
+	bio.skills.forEach(function(skill) {
+		var formattedSkill = HTMLskills.replace("%data%",skill);
 		$("#skills").append(formattedSkill);
-	}
+	})
 	$("#footerContacts").append(formattedMobile);
 	$("#footerContacts").append(formattedEmail);
 	$("#footerContacts").append(formattedGithub);
 	$("#footerContacts").append(formattedTwitter);
 	$("#footerContacts").append(formattedLocation);
-}
+};
 
 work.display = function() {
 	for (job in work.jobs) {
@@ -123,7 +123,7 @@ work.display = function() {
 		$(".work-entry:last").append(formattedLocation);
 		$(".work-entry:last").append(formattedDescription);
 	}
-}
+};
 
 
 projects.display = function() {
@@ -136,12 +136,12 @@ projects.display = function() {
 		$(".project-entry:last").append(formattedTitle);
 		$(".project-entry:last").append(formattedDates);
 		$(".project-entry:last").append(formattedDescription);
-		for (image in projects.projects[project].images) {
-			var formattedPicture = HTMLprojectImage.replace("%data%",projects.projects[project].images[image]);
+		projects.projects[project].images.forEach(function(image) {
+			var formattedPicture = HTMLprojectImage.replace("%data%",image);
 			$(".project-entry:last").append(formattedPicture);
-		}
+		});
 	}
-}
+};
 
 education.display = function() {
 	for (school in education.schools) {
@@ -154,10 +154,10 @@ education.display = function() {
 		$(".education-entry:last").append(formattedName + formattedDegree);
 		$(".education-entry:last").append(formattedDates);
 		$(".education-entry:last").append(formattedLocation);
-		for (major in education.schools[school].majors) {
-			var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors[major]);
+		education.schools[school].majors.forEach(function (major) {
+			var formattedMajor = HTMLschoolMajor.replace("%data%",major);
 			$(".education-entry:last").append(formattedMajor);
-		}
+		});
 	}
 	$("#education").append("<br>");
 	$("#education").append(HTMLonlineClasses);
@@ -173,7 +173,7 @@ education.display = function() {
 		$(".education-entry:last").append(formattedDates);
 		$(".education-entry:last").append(formattedURL);
 	}
-}
+};
 
 bio.display();
 work.display();
@@ -181,10 +181,3 @@ projects.display();
 education.display();
 
 $("#mapDiv").append(googleMap);
-
-$(document).click(function(loc) {
-	var x = loc.pageX;
-	var y = loc.pageY;
-
-	logClicks(x,y);
-})
