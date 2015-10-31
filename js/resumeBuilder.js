@@ -20,15 +20,50 @@ var projects = {
 		{
 			"title" : "Portfolio",
 			"dates" : "July 2015",
-			"description" : "Interactive Portfolio",
+			"description" : "Interactive Portfolio Using Bootstrap Framework",
 			"images" : ["images/project1-1.png", "images/project1-2.png"],
 			"url" : "http://www.github.com/jstout38/Project-1"
 		},
 		{
 			"title" : "Resume",
 			"dates" : "August 2015",
-			"description" : "Interactive Resume",
+			"description" : "Interactive Resume Using jQuery",
 			"images" : ["images/project2-1.png", "images/project2-2.png"],
+			"url" : "http://www.github.com/jstout38/Project-2"
+		},
+		{
+			"title" : "Arcade Clone",
+			"dates" : "August 2015",
+			"description" : "Clone of the Popular Game Frogger (Artwork provided by Udacity)",
+			"images" : ["images/project3-1.png", "images/project3-2.png"],
+			"url" : "http://www.github.com/jstout38/Project-2"
+		},
+		{
+			"title" : "Website Optimization",
+			"dates" : "September 2015",
+			"description" : "Optimization of an Existing Website with CSS Background Animations",
+			"images" : ["images/project4-1.png", "images/project4-2.png"],
+			"url" : "http://www.github.com/jstout38/Project-2"
+		},
+		{
+			"title" : "Neighborhood Map",
+			"dates" : "September 2015",
+			"description" : "Neighborhood Map of Local Restaurants Using Knockout Framework annd Google Maps and Yelp APIs",
+			"images" : ["images/project5-1.png", "images/project5-2.png"],
+			"url" : "http://www.github.com/jstout38/Project-2"
+		},
+		{
+			"title" : "Calorie Counter",
+			"dates" : "October 2015",
+			"description" : "Calorie Counter Web App Developed Using Backbone Framework",
+			"images" : ["images/project5-2-1.png", "images/project5-2-2.png"],
+			"url" : "http://www.github.com/jstout38/Project-2"
+		},
+		{
+			"title" : "Feedreader Testing",
+			"dates" : "October 2015",
+			"description" : "Testing of Existing Feedreader App Using Jasmine",
+			"images" : ["images/project6-1.png", "images/project6-2.png"],
 			"url" : "http://www.github.com/jstout38/Project-2"
 		}
 	]
@@ -37,7 +72,7 @@ var projects = {
 var bio = {
 	"name" : "Justin Stout",
 	"role" : "Web Developer",
-	"welcomeMessage" : "Welcome to my resume!",
+	"welcomeMessage" : "I am a front-end developer and certified professional librarian with over nine years’ experience of project and integrated library system management seeking a front-end developer position. I have practical project experience with the latest front-end development technologies and standards and my background gives me a diverse background that will help me succeed in this new field.",
 	"contacts" : {
 		"mobile" : "252-525-0115",
 		"email" : "jstout38@gmail.com",
@@ -46,7 +81,7 @@ var bio = {
 		"location" : "Kinston, NC"
 	},
 	"bioPic" : "images/picture.jpg",
-	"skills" : ["HTML", "CSS", "Javascript", "jQuery"]
+	"skills" : ["HTML", "CSS", "Javascript", "jQuery", "Bootstrap", "Backbone", "Knockout", "Jasmine", "Git", "Linux Environments"]
 };
 
 var education = {
@@ -101,7 +136,7 @@ bio.display = function() {
 	bio.skills.forEach(function(skill) {
 		var formattedSkill = HTMLskills.replace("%data%",skill);
 		$("#skills").append(formattedSkill);
-	})
+	});
 	$("#footerContacts").append(formattedMobile);
 	$("#footerContacts").append(formattedEmail);
 	$("#footerContacts").append(formattedGithub);
@@ -110,19 +145,19 @@ bio.display = function() {
 };
 
 work.display = function() {
-	for (job in work.jobs) {
+	work.jobs.forEach( function(job) {
 		$("#workExperience").append(HTMLworkStart);
-		var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[job].employer);
-		formattedEmployer = formattedEmployer.replace("#",work.jobs[job].url);
-		var formattedTitle = HTMLworkTitle.replace("%data%",work.jobs[job].title);
+		var formattedEmployer = HTMLworkEmployer.replace("%data%",job.employer);
+		formattedEmployer = formattedEmployer.replace("#",job.url);
+		var formattedTitle = HTMLworkTitle.replace("%data%",job.title);
 		$(".work-entry:last").append(formattedEmployer + formattedTitle);
-		var formattedDates = HTMLworkDates.replace("%data%",work.jobs[job].dates);
-		var formattedLocation = HTMLworkLocation.replace("%data%",work.jobs[job].location);
-		var formattedDescription = HTMLworkDescription.replace("%data%",work.jobs[job].description);
+		var formattedDates = HTMLworkDates.replace("%data%",job.dates);
+		var formattedLocation = HTMLworkLocation.replace("%data%",job.location);
+		var formattedDescription = HTMLworkDescription.replace("%data%",job.description);
 		$(".work-entry:last").append(formattedDates);
 		$(".work-entry:last").append(formattedLocation);
 		$(".work-entry:last").append(formattedDescription);
-	}
+	});
 };
 
 
