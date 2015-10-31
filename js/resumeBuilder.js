@@ -35,35 +35,35 @@ var projects = {
 			"title" : "Arcade Clone",
 			"dates" : "August 2015",
 			"description" : "Clone of the Popular Game Frogger (Artwork provided by Udacity)",
-			"images" : ["images/project3-1.png", "images/project3-2.png"],
+			"images" : ["images/Project3-1.png", "images/Project3-2.png"],
 			"url" : "http://www.github.com/jstout38/Project-2"
 		},
 		{
 			"title" : "Website Optimization",
 			"dates" : "September 2015",
 			"description" : "Optimization of an Existing Website with CSS Background Animations",
-			"images" : ["images/project4-1.png", "images/project4-2.png"],
+			"images" : ["images/Project4-1.png", "images/Project4-2.png"],
 			"url" : "http://www.github.com/jstout38/Project-2"
 		},
 		{
 			"title" : "Neighborhood Map",
 			"dates" : "September 2015",
 			"description" : "Neighborhood Map of Local Restaurants Using Knockout Framework annd Google Maps and Yelp APIs",
-			"images" : ["images/project5-1.png", "images/project5-2.png"],
+			"images" : ["images/Project5-1.png", "images/Project5-2.png"],
 			"url" : "http://www.github.com/jstout38/Project-2"
 		},
 		{
 			"title" : "Calorie Counter",
 			"dates" : "October 2015",
 			"description" : "Calorie Counter Web App Developed Using Backbone Framework",
-			"images" : ["images/project5-2-1.png", "images/project5-2-2.png"],
+			"images" : ["images/Project5-2-1.png", "images/Project5-2-2.png"],
 			"url" : "http://www.github.com/jstout38/Project-2"
 		},
 		{
 			"title" : "Feedreader Testing",
 			"dates" : "October 2015",
 			"description" : "Testing of Existing Feedreader App Using Jasmine",
-			"images" : ["images/project6-1.png", "images/project6-2.png"],
+			"images" : ["images/Project6-1.png", "images/Project6-2.png"],
 			"url" : "http://www.github.com/jstout38/Project-2"
 		}
 	]
