@@ -138,6 +138,9 @@ a {
 
 .flex-box {
   display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -147,6 +150,9 @@ a {
 
 .flex-item {
   display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
