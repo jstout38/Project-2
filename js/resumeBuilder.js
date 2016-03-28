@@ -22,56 +22,63 @@ var projects = {
 			"dates" : "July 2015",
 			"description" : "Interactive Portfolio Using Bootstrap Framework",
 			"images" : ["images/project1-1.png", "images/project1-2.png"],
-			"url" : "http://www.github.com/jstout38/Project-1"
+			"url" : "http://www.github.com/jstout38/jstout38.github.io"
 		},
 		{
 			"title" : "Resume",
 			"dates" : "August 2015",
 			"description" : "Interactive Resume Using jQuery",
 			"images" : ["images/project2-1.png", "images/project2-2.png"],
-			"url" : "http://www.github.com/jstout38/Project-2"
+			"url" : "http://www.github.com/jstout38/interactive-resume-project"
 		},
 		{
 			"title" : "Arcade Clone",
 			"dates" : "August 2015",
 			"description" : "Clone of the Popular Game Frogger (Artwork provided by Udacity)",
 			"images" : ["images/Project3-1.png", "images/Project3-2.png"],
-			"url" : "http://www.github.com/jstout38/Project-2"
+			"url" : "http://www.github.com/jstout38/arcade-game-project"
 		},
 		{
 			"title" : "Website Optimization",
 			"dates" : "September 2015",
 			"description" : "Optimization of an Existing Website with CSS Background Animations",
 			"images" : ["images/Project4-1.png", "images/Project4-2.png"],
-			"url" : "http://www.github.com/jstout38/Project-2"
+			"url" : "http://www.github.com/jstout38/website-optimization-project"
 		},
 		{
 			"title" : "Neighborhood Map",
 			"dates" : "September 2015",
 			"description" : "Neighborhood Map of Local Restaurants Using Knockout Framework annd Google Maps and Yelp APIs",
 			"images" : ["images/Project5-1.png", "images/Project5-2.png"],
-			"url" : "http://www.github.com/jstout38/Project-2"
+			"url" : "http://www.github.com/jstout38/neighborhood-map-project"
 		},
 		{
 			"title" : "Calorie Counter",
 			"dates" : "October 2015",
 			"description" : "Calorie Counter Web App Developed Using Backbone Framework",
 			"images" : ["images/Project5-2-1.png", "images/Project5-2-2.png"],
-			"url" : "http://www.github.com/jstout38/Project-2"
+			"url" : "http://www.github.com/jstout38/calorie-counter-project"
 		},
 		{
 			"title" : "Feedreader Testing",
 			"dates" : "October 2015",
 			"description" : "Testing of Existing Feedreader App Using Jasmine",
 			"images" : ["images/Project6-1.png", "images/Project6-2.png"],
-			"url" : "http://www.github.com/jstout38/Project-2"
+			"url" : "http://www.github.com/jstout38/feedreader-testing-project"
+		},
+		{
+			"title" : "Movie Log",
+			"dates" : "February-March 2016",
+			"description" : "A fully functional web application with a back end built using Python, Flask, and SQLAlchemy. AJAX calls to The Movie Database (www.themoviedb.org) API and jQuery are used to provide real-time updates to the interface for adding movies and viewing user logs. The application uses Google and Facebook's OAuth APIs to create accounts and allow secure logins. Bootstrap is used for formatting. The application and its PostgreSQL database are hosted at Heroku.",
+			"images" : ["images/Project7-1.jpg", "images/Project7-2.png"],
+			"url" : "http://www.github.com/jstout38/movieproject"
 		}
 	]
 };
 
 var bio = {
 	"name" : "Justin Stout",
-	"role" : "Web Developer",
+	"role" : "Web Developer and Librarian",
 	"welcomeMessage" : "I am a front-end developer and certified professional librarian with over nine years’ experience of project and integrated library system management seeking a front-end developer position. I have practical project experience with the latest front-end development technologies and standards and my background gives me a diverse background that will help me succeed in this new field.",
 	"contacts" : {
 		"mobile" : "252-525-0115",
@@ -81,7 +88,7 @@ var bio = {
 		"location" : "Kinston, NC"
 	},
 	"bioPic" : "images/picture.jpg",
-	"skills" : ["HTML", "CSS", "Javascript", "jQuery", "Bootstrap", "Backbone", "Knockout", "Jasmine", "Git", "Linux Environments"]
+	"skills" : ["HTML", "CSS", "Javascript", "Python", "Flask", "SQL", "jQuery", "Bootstrap", "Backbone", "Knockout", "Git", "Linux Environments"]
 };
 
 var education = {
