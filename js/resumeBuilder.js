@@ -46,13 +46,6 @@ var projects = {
 			"url" : "http://www.github.com/jstout38/website-optimization-project"
 		},
 		{
-			"title" : "Neighborhood Map",
-			"dates" : "September 2015",
-			"description" : "Neighborhood Map of Local Restaurants Using Knockout Framework annd Google Maps and Yelp APIs",
-			"images" : ["images/Project5-1.png", "images/Project5-2.png"],
-			"url" : "http://www.github.com/jstout38/neighborhood-map-project"
-		},
-		{
 			"title" : "Calorie Counter",
 			"dates" : "October 2015",
 			"description" : "Calorie Counter Web App Developed Using Backbone Framework",
@@ -72,6 +65,13 @@ var projects = {
 			"description" : "A fully functional web application with a back end built using Python, Flask, and SQLAlchemy. AJAX calls to The Movie Database (www.themoviedb.org) API and jQuery are used to provide real-time updates to the interface for adding movies and viewing user logs. The application uses Google and Facebook's OAuth APIs to create accounts and allow secure logins. Bootstrap is used for formatting. The application and its PostgreSQL database are hosted at Heroku.",
 			"images" : ["images/Project7-1.jpg", "images/Project7-2.png"],
 			"url" : "http://www.github.com/jstout38/movieproject"
+		},
+		{
+			"title" : "Web Forum",
+			"dates" : "August-September 2016",
+			"description" : "A fully functional web forum built from scratch using a Ruby on Rails API and an AngularJS client featuring Angular Material elements. The Ruby on Rails application employs MongoDB, a NoSQL, document-based data store. Devise is used for user authentication and authorization and is integrated into both the backend API and the client.",
+			"images" : ["images/Project8-1.png", "images/Project8-2.png"],
+			"url" : "http://www.github.com/jstout38/interactive-resume-project"
 		}
 	]
 };
@@ -84,7 +84,6 @@ var bio = {
 		"mobile" : "252-525-0115",
 		"email" : "jstout38@gmail.com",
 		"github" : "jstout38",
-		"twitter" : "@JustinMStout",
 		"location" : "Kinston, NC"
 	},
 	"bioPic" : "images/picture.jpg",
@@ -128,12 +127,10 @@ bio.display = function() {
 	var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
 	var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
 	var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-	var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
 	var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 	$("#topContacts").append(formattedMobile);
 	$("#topContacts").append(formattedEmail);
 	$("#topContacts").append(formattedGithub);
-	$("#topContacts").append(formattedTwitter);
 	$("#topContacts").append(formattedLocation);
 	var formattedPicture = HTMLbioPic.replace("%data%", bio.bioPic);
 	var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
@@ -147,7 +144,6 @@ bio.display = function() {
 	$("#footerContacts").append(formattedMobile);
 	$("#footerContacts").append(formattedEmail);
 	$("#footerContacts").append(formattedGithub);
-	$("#footerContacts").append(formattedTwitter);
 	$("#footerContacts").append(formattedLocation);
 };
 
